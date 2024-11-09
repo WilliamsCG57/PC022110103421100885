@@ -1,10 +1,15 @@
 package dev.williamscg.pc022110103421100885
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,5 +21,32 @@ class LoginActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val etEmailLogin = findViewById<EditText>(R.id.etEmailLogin)
+        val etPasswordLogin = findViewById<EditText>(R.id.etPassword)
+        val btnLogin = findViewById<Button>(R.id.btnLogin)
+        val auth = FirebaseAuth.getInstance()
+
+
+        btnLogin.setOnClickListener{
+            val email = etEmailLogin.text.toString()
+            val password = etPasswordLogin.text.toString()
+
+            auth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this){ task ->
+                    if (task.isSuccessful){
+                        //Inicio de sesión exitoso
+                        Snackbar.make(findViewById(android.R.id.content),
+                            "Inicio de sesión exitoso", Snackbar.LENGTH_SHORT).show()
+                        startActivity(Intent(this, MainActivity::class.java))
+
+                    }else{
+                        //Inicio de sesión fallido
+                        Snackbar.make(findViewById(android.R.id.content),
+                            "Error con el inicio de sesión", Snackbar.LENGTH_SHORT).show()
+                    }
+                }
+
+        }
+
     }
 }
