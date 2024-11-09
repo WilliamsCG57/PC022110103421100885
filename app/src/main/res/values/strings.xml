@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PC022110103421100885</string>
+    <string name="valtvLoginTitle">LOGIN</string>
+    <string name="valetEmail">Enter email</string>
+    <string name="valetPwd">Enter password</string>
+    <string name="valbtnLogin">INICIAR SESIÓN</string>
+</resources>
