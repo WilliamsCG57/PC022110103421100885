@@ -10,8 +10,8 @@
         android:label="fragment_registro"
         tools:layout="@layout/fragment_registro" />
     <fragment
-        android:id="@+id/nav_resumen"
-        android:name="dev.williamscg.pc022110103421100885.ui.fragments.ResumenFragment"
-        android:label="fragment_resumen"
-        tools:layout="@layout/fragment_resumen" />
+        android:id="@+id/nav_listado"
+        android:name="dev.williamscg.pc022110103421100885.ui.fragments.ListadoFragment"
+        android:label="fragment_listado"
+        tools:layout="@layout/fragment_listado" />
 </navigation>
