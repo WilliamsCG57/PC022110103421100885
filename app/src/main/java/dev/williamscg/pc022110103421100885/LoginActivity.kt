@@ -37,7 +37,8 @@ class LoginActivity : AppCompatActivity() {
                         //Inicio de sesión exitoso
                         Snackbar.make(findViewById(android.R.id.content),
                             "Inicio de sesión exitoso", Snackbar.LENGTH_SHORT).show()
-                        startActivity(Intent(this, MainActivity::class.java))
+                        startActivity(Intent(this, PrincipalActivity::class.java))
+
 
                     }else{
                         //Inicio de sesión fallido
