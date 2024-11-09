@@ -14,10 +14,14 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="32dp"
+        android:backgroundTint="#16D9C2"
+        android:shadowColor="#FFFFFF"
         android:text="@string/valbtnLogin"
+        android:textColorLink="#009688"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        app:strokeColor="#0FC893" />
 
     <EditText
         android:id="@+id/etEmailLogin"
@@ -51,5 +55,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmailLogin"
         app:layout_constraintVertical_bias="0.011" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="172dp"
+        android:layout_height="142dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/etEmailLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

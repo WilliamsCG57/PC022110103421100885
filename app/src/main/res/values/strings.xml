@@ -24,4 +24,6 @@
     <string name="valetDesc">Ingrese Descripcion</string>
     <string name="valetMonto">Ingrese Monto</string>
     <string name="valbtnRegistro">GUARDAR</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
